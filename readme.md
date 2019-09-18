@@ -9,7 +9,7 @@
 - [Class composition with Mixins](#class-composition-with-mixins)
 - [Higher Order Functions](#higher-order-functions)
 - [Nested Methods](#nested-methods)
-- [Multiple Parameter Lists (Currying)](#multiple-parameter-lists-(currying))
+- [Multiple Parameter Lists (Currying)](#multiple-parameter-lists-currying)
 - [Pattern matching](#pattern-matching)
 - [Singleton objects](#singleton-objects)
 - [Regular Expression Patterns](#regular-expression-patterns)
@@ -19,14 +19,14 @@
 - [Upper Type Bounds](#upper-type-bounds)
 - [Lower Type Bounds](#lower-type-bounds)
 - [Inner Classes](#inner-classes)
-- [Self-type](#self--type)
+- [Self-type](#self-type)
 - [Implicit Parameters](#implicit-parameters)
 - [Polymorphic Methods](#polymorphic-methods)
 - [Operators](#operators)
-- [By-name Parameters](#by--name-parameters)
+- [By-name Parameters](#by-name-parameters)
 - [Default Parameter Values](#default-parameter-values)
 - [Packages and Imports](#packages-and-imports)
-- [Other Notes](other-notes)
+- [More Notes](#more-notes)
 
 ## [Basics](https://docs.scala-lang.org/tour/basics.html)
 
@@ -435,7 +435,7 @@ circle1.area
 ```
 
 
-## [Regular Expression Patterns](https://docs.scala-lang.org/tour/regular-expression-patterns.htmlhttps://docs.scala-lang.org/tour/regular-expression-patterns.html)
+## [Regular Expression Patterns](https://docs.scala-lang.org/tour/regular-expression-patterns.html)
 
 Any string can be converted to a regular expression using the `.r` method.
 
@@ -695,7 +695,7 @@ import users.{User, UserPreferences}  // Only imports selected members
 import users.{UserPreferences => UPrefs}  // import and rename for convenience
 ```
 
-## Other notes
+## More notes
 
 Class constructor: private, public, read-only, mutable variables:
 
