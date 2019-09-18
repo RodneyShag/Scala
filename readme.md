@@ -700,11 +700,11 @@ import users.{UserPreferences => UPrefs}  // import and rename for convenience
 Class constructor: private, public, read-only, mutable variables:
 
 ```scala
-class Ok[T](statusCode: Int, result: T) // both fields are private, but the fields are present on the constructor
+class Ok[T](statusCode: Int, result: T) // private fields, but present on the constructor
 
-class Ok[T](val statusCode: Int, val result: T) // alternatively, both fields could be public, read-only with val
+class Ok[T](val statusCode: Int, val result: T) // public, read-only fields
 
-class Ok[T](var statusCode: Int, var result: T) // alternatively, both fields could be public, mutable with var
+class Ok[T](var statusCode: Int, var result: T) // public, mutable fields
 ```
 
 On a case class, "when you use the case keyword, you do not need to use val to make a field public and read-only":
