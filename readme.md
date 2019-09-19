@@ -1,7 +1,5 @@
-- Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections other than "Implicit Conversions" were well written.
-- Online compiler: [Scala Fiddle](https://scalafiddle.io)
-
 ## Table of Contents
+- [Introduction](#introduction)
 - [Basics](#basics)
 - [Unified Types](#unified-types)
 - [Classes](#classes)
@@ -27,6 +25,13 @@
 - [Default Parameter Values](#default-parameter-values)
 - [Packages and Imports](#packages-and-imports)
 - [More Notes](#more-notes)
+
+## [Introduction](https://docs.scala-lang.org/tour/tour-of-scala.html)
+
+- Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections other than "Implicit Conversions" were well written.
+- Online compiler: [Scala Fiddle](https://scalafiddle.io)
+
+Scala is both an object-oriented and functional programming language. It is a statically-typed language, but uses _type inference_ so the user is not required to annotate code with redundant type information.
 
 ## [Basics](https://docs.scala-lang.org/tour/basics.html)
 
