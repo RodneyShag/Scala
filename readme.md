@@ -1,4 +1,7 @@
-## Table of Contents
+<p align="center">
+    <img src="images/scala_logo.png">
+</p>
+
 - [Introduction](#introduction)
 - [Basics](#basics)
 - [Unified Types](#unified-types)
