@@ -28,13 +28,14 @@
 - [Default Parameter Values](#default-parameter-values)
 - [Packages and Imports](#packages-and-imports)
 - [More Notes](#more-notes)
+- [References](#references)
 
 ## [Introduction](https://docs.scala-lang.org/tour/tour-of-scala.html)
 
-- Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections other than "Implicit Conversions" were well written.
-- Online compiler: [Scala Fiddle](https://scalafiddle.io)
-
 Scala is both an object-oriented and functional programming language. It is a statically-typed language, but uses _type inference_ so the user is not required to annotate code with redundant type information.
+
+Online compiler: [Scala Fiddle](https://scalafiddle.io)
+
 
 ## [Basics](https://docs.scala-lang.org/tour/basics.html)
 
@@ -720,3 +721,7 @@ On a case class, "when you use the case keyword, you do not need to use val to m
 ```scala
 case class Ok[T](statusCode: Int, result: T)
 ```
+
+## References
+
+Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections other than "Implicit Conversions" were well written.
