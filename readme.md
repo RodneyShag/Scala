@@ -324,6 +324,8 @@ println(d.loudMessage)  // I'M AN INSTANCE OF CLASS B
 
 ## [Higher Order Functions](https://docs.scala-lang.org/tour/higher-order-functions.html)
 
+Higher order functions are functions that taking another function as a parameter.
+
 ```scala
 val salaries = Seq(2, 7, 4)
 val newSalaries = salaries.map(x => x * 2) // List(4, 14, 8)
@@ -721,6 +723,15 @@ On a case class, "when you use the case keyword, you do not need to use val to m
 ```scala
 case class Ok[T](statusCode: Int, result: T)
 ```
+
+#### [Null, null, Nil, Nothing, None, and Unit in Scala](https://sanaulla.info/2009/07/12/nothingness-2/)
+
+- `Null` – it's a Trait.
+- `null` – it's an instance of `Null` - similar to Java null.
+- `Nil` – represents an empty List of anything of zero length.
+- `Nothing` - it's a Trait. Its a subtype of everything, but not superclass of anything. There are no instances of `Nothing`.
+- `None` – used with `Option` which has exactly 2 subclasses: `Some` and `None`. `None` is used to represent a sensible return value to avoid null pointer exceptions.
+- `Unit` – type used in method that doesn’t return a value.
 
 ## References
 
