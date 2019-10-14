@@ -2,7 +2,6 @@
     <img src="images/scala_logo.png">
 </p>
 
-- [Intended Learning Strategy](#intended-learning-strategy)
 - [Introduction](#introduction)
 - [Basics](#basics)
 - [Unified Types](#unified-types)
@@ -31,11 +30,8 @@
 - [More Notes](#more-notes)
 - [References](#references)
 
-## Intended Learning Strategy
 
-This repo is a concise summary and replacement of the [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html) tutorial.
-
-Read this repo linearly from top to bottom. Although this repo provides hyperlinks to [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html), you do not need to click through the hyperlinks to learn Scala. They're provided just in case you need more information about a topic.
+This repo is a concise summary and _replacement_ of the [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html) tutorial. Using the hyperlinks below is optional.
 
 
 ## [Introduction](https://docs.scala-lang.org/tour/tour-of-scala.html)
