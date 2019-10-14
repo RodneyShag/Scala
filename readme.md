@@ -35,7 +35,7 @@
 
 This repo is a concise summary and replacement of the [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html) tutorial.
 
-Read this repo linearly from top to bottom. Although this repo provides hyperlinks to "Tour of Scala", you do not need to click through the hyperlinks to learn Scala. They're provided just in case you need more information about a topic.
+Read this repo linearly from top to bottom. Although this repo provides hyperlinks to [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html), you do not need to click through the hyperlinks to learn Scala. They're provided just in case you need more information about a topic.
 
 
 ## [Introduction](https://docs.scala-lang.org/tour/tour-of-scala.html)
