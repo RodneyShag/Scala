@@ -2,6 +2,7 @@
     <img src="images/scala_logo.png">
 </p>
 
+- [Intended Learning Strategy](#intended-learning-strategy)
 - [Introduction](#introduction)
 - [Basics](#basics)
 - [Unified Types](#unified-types)
@@ -29,6 +30,13 @@
 - [Packages and Imports](#packages-and-imports)
 - [More Notes](#more-notes)
 - [References](#references)
+
+## Intended Learning Strategy
+
+This repo is a concise summary and replacement of the [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html) tutorial.
+
+Read this repo linearly from top to bottom. Although this repo provides hyperlinks to "Tour of Scala", you do not need to click through the hyperlinks to learn Scala. They're provided just in case you need more information about a topic.
+
 
 ## [Introduction](https://docs.scala-lang.org/tour/tour-of-scala.html)
 
@@ -718,7 +726,7 @@ class Ok[T](val statusCode: Int, val result: T) // public, read-only fields
 class Ok[T](var statusCode: Int, var result: T) // public, mutable fields
 ```
 
-On a case class, "when you use the case keyword, you do not need to use val to make a field public and read-only":
+On a case class, "when you use the case keyword, you do not need to use `val` to make a field public and read-only":
 
 ```scala
 case class Ok[T](statusCode: Int, result: T)
@@ -735,4 +743,4 @@ case class Ok[T](statusCode: Int, result: T)
 
 ## References
 
-Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections other than "Implicit Conversions" were well written.
+Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections in their tutorial (other than "Implicit Conversions") were well written.
