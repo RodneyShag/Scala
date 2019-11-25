@@ -741,7 +741,7 @@ case class Ok[T](statusCode: Int, result: T)
 
 #### The `return` keyword
 
-[A `return` expression, when evaluated, abandons the current computation and returns to the caller of the _method_ in which return appears](https://tpolecat.github.io/2014/05/09/return.html):
+In Scala, it is encouraged to never use the `return` keyword. [A `return` expression, when evaluated, abandons the current computation and returns to the caller of the _method_ in which return appears](https://tpolecat.github.io/2014/05/09/return.html):
 
 Correct:
 
