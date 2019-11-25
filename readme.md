@@ -712,6 +712,8 @@ import users.{UserPreferences => UPrefs}  // import and rename for convenience
 
 ## More notes
 
+#### Constructors
+
 Class constructor: private, public, read-only, mutable variables:
 
 ```scala
@@ -728,7 +730,7 @@ On a case class, "when you use the case keyword, you do not need to use `val` to
 case class Ok[T](statusCode: Int, result: T)
 ```
 
-#### [Null, null, Nil, Nothing, None, and Unit in Scala](https://sanaulla.info/2009/07/12/nothingness-2/)
+#### [Null, null, Nil, Nothing, None, and Unit in Scala](https://sanaulla.info/2009/07/12/nothingness-2)
 
 - `Null` – it's a Trait.
 - `null` – it's an instance of `Null` - similar to Java null.
@@ -737,6 +739,33 @@ case class Ok[T](statusCode: Int, result: T)
 - `None` – used with `Option` which has exactly 2 subclasses: `Some` and `None`. `None` is used to represent a sensible return value to avoid null pointer exceptions.
 - `Unit` – type used in method that doesn’t return a value.
 
+#### The `return` keyword
+
+[A `return` expression, when evaluated, abandons the current computation and returns to the caller of the _method_ in which return appears](https://tpolecat.github.io/2014/05/09/return.html):
+
+Correct:
+
+```scala
+def sum(ns: Int*): Int = ns.foldLeft(0)((n, m) => n + m)
+sum(33, 42, 99)
+
+// Output
+res2: Int = 174
+```
+
+Incorrect: was expecting 174, but got 33.
+
+```scala
+def sumR(ns: Int*): Int = ns.foldLeft(0)((n, m) => return n + m)
+sumR(33, 42, 99)
+
+// Output
+res3: Int = 33
+```
+
+
 ## References
 
-Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections in their tutorial (other than "Implicit Conversions") were well written.
+- Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections in their tutorial (other than "Implicit Conversions") were well written.
+- Article: [Nothingness](https://sanaulla.info/2009/07/12/nothingness-2) - summarized above.
+- Article: [The Point of No Return](https://tpolecat.github.io/2014/05/09/return.html) - went through first 2 examples, which are summarized above.
