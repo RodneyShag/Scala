@@ -28,6 +28,9 @@
 - [Default Parameter Values](#default-parameter-values)
 - [Packages and Imports](#packages-and-imports)
 - [More Notes](#more-notes)
+  - [Constructors](#constructors)
+  - [Null, null, Nil, Nothing, None, and Unit in Scala](#null-null-nil-nothing-none-and-unit-in-scala)
+  - [The `return` keyword](#the-return-keyword)
 - [References](#references)
 
 
@@ -763,9 +766,61 @@ sumR(33, 42, 99)
 res3: Int = 33
 ```
 
+#### [Lazy val](https://riptutorial.com/scala/example/10876/lazy-val)
+
+`lazy val` is a language feature where the initialization of a `val` is delayed until it is accessed for the first time. After that point, it acts just like a regular `val`.
+
+There are 2 reasons to use `lazy val` in Scala":
+
+1) Initialization is computationally expensive and `val` is not always used
+
+```scala
+lazy val tiresomeValue = {(1 to 1000000).filter(x => x % 113 == 0).sum}
+if (scala.util.Random.nextInt > 1000) {
+  println(tiresomeValue)
+}
+```
+
+2) Resolving cyclic dependencies
+
+Let's look at an example with two objects that need to be declared at the same time during instantiation:
+
+```scala
+object comicBook {
+  def main(args:Array[String]): Unit = {
+    gotham.hero.talk()
+    gotham.villain.talk()
+  }
+}
+
+class Superhero(val name: String) {
+  lazy val toLockUp = gotham.villain
+  def talk(): Unit = {
+    println(s"I won't let you win ${toLockUp.name}!")
+  }
+}
+
+class Supervillain(val name: String) {
+  lazy val toKill = gotham.hero
+  def talk(): Unit = {
+    println(s"Let me loosen up Gotham a little bit ${toKill.name}!")
+  }
+}
+
+object gotham {
+  val hero: Superhero = new Superhero("Batman")
+  val villain: Supervillain = new Supervillain("Joker")
+}
+```
+
+By using `lazy`, the reference can be assigned before it is initialized, without fear of having an uninitialized value.
+
+[Why not declare all vals lazy?](https://www.reddit.com/r/scala/comments/3x9x1x/when_to_use_lazy/) - Lazy initialization is thread safe, so declaring all `val`s as lazy would incur the overhead of ensuring thread safety, which is often not needed and would result in some unnecessary overhead for the usual case.
 
 ## References
 
 - Notes are summarized from [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html). All sections in their tutorial (other than "Implicit Conversions") were well written.
 - Article: [Nothingness](https://sanaulla.info/2009/07/12/nothingness-2) - summarized above.
 - Article: [The Point of No Return](https://tpolecat.github.io/2014/05/09/return.html) - went through first 2 examples, which are summarized above.
+- Article: [Scala Language - lazy val](https://riptutorial.com/scala/example/10876/lazy-val) - summarized above
+- Reddit post: [When to use 'lazy'](https://www.reddit.com/r/scala/comments/3x9x1x/when_to_use_lazy) - summarized most popular answer
