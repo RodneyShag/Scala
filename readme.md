@@ -31,7 +31,7 @@
   - [Constructors](#constructors)
   - [Null, null, Nil, Nothing, None, and Unit in Scala](#null-null-nil-nothing-none-and-unit-in-scala)
   - [The `return` keyword](#the-return-keyword)
-  - [Lazy val](#lazy-val)
+  - [`lazy val`](#lazy-val)
 - [References](#references)
 
 
@@ -767,7 +767,7 @@ sumR(33, 42, 99)
 res3: Int = 33
 ```
 
-#### [Lazy val](https://riptutorial.com/scala/example/10876/lazy-val)
+#### [`lazy val`](https://riptutorial.com/scala/example/10876/lazy-val)
 
 `lazy val` is a language feature where the initialization of a `val` is delayed until it is accessed for the first time. After that point, it acts just like a regular `val`.
 
