@@ -31,6 +31,7 @@
   - [Constructors](#constructors)
   - [Null, null, Nil, Nothing, None, and Unit in Scala](#null-null-nil-nothing-none-and-unit-in-scala)
   - [The `return` keyword](#the-return-keyword)
+  - [Lazy val](#lazy-val)
 - [References](#references)
 
 
