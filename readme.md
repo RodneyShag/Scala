@@ -285,14 +285,14 @@ Pattern matching using `foreach` and `case`:
 ```scala
 val planets = List(("Mercury", 57.9), ("Venus", 108.2), ("Earth", 149.6))
 
-planets.foreach{
+planets.foreach {
   case ("Earth", distance) =>
     println(s"Our planet is $distance million kilometers from the sun")
   case _ =>
 }
 ```
 
-Pattern matchin in `for` loops:
+Pattern matching in `for` loops:
 
 ```Scala
 val numPairs = List((2, 5), (3, -7))
@@ -332,7 +332,7 @@ println(d.loudMessage)  // I'M AN INSTANCE OF CLASS B
 
 ## [Higher Order Functions](https://docs.scala-lang.org/tour/higher-order-functions.html)
 
-Higher order functions are functions that taking another function as a parameter.
+Higher order functions are functions that take another function as a parameter.
 
 ```scala
 val salaries = Seq(2, 7, 4)
@@ -423,7 +423,7 @@ def showImportantNotification(notification: Notification, importantPeopleInfo: S
 #### Other functionality
 
 - __matching on type__ - You can also match on "type" of the object
-- __sealed__ - Traits and classes can be marked `sealed` which means all subtypes must be declared in the same file. This assures all subtypes are known. This is useful for pattern matching because we don't need a "catch all" case.
+- `sealed` - Traits and classes can be marked `sealed` which means all subtypes must be declared in the same file. This assures all subtypes are known. This is useful for pattern matching because we don't need a "catch all" case.
 
 
 ## [Singleton Objects](https://docs.scala-lang.org/tour/singleton-objects.html)
@@ -482,8 +482,8 @@ val userBase = List(User("Travis", 28),
   User("Jennifer", 44),
   User("Dennis", 23))
 
-val twentySomethings = for (user <- userBase if (user.age >=20 && user.age < 30))
-  yield user.name  // i.e. add this to a list
+val twentySomethings = for (user <- userBase if (user.age >= 20 && user.age < 30))
+  yield user.name // i.e. add this to a list
 
 twentySomethings.foreach(name => println(name))  // prints Travis Dennis
 ```
